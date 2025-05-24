@@ -1,9 +1,18 @@
 :root[data-theme-mode="light"] {
   --palette-primary: var(--abbes-primaryColor-50);
-  --palette-onPrimary: var(--abbes-primaryColor-10);
+  --palette-on-primary: var(--abbes-primaryColor-10);
+  --palette-primary-container: var(--abbes-primary-20);
+  --palette-on-primaryContainer: var(--abbes-primary-70);
 }
 
 :root[data-theme-mode="dark"] {
   --palette-primary: var(--abbes-primaryColor-50);
-  --palette-onPrimary: var(--abbes-primaryColor-90);
+  --palette-on-primary: var(--abbes-primaryColor-10);
+  --palette-primary-container: var(--abbes-primaryColor-20);
+  --palette-on-primaryContainer: var(--abbes-primaryColor-70);
+
+  --palette-surface: var(--abbes-neutralColor-50);
+  --palette-on-surface: var(--abbes-neutralColor-10);
+  --palette-surface-container: var(--abbes-neutralColor-20);
+  --palette-on-surfaceContainer: var(--abbes-neutralColor-70);
 }
