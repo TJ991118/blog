@@ -1,0 +1,9 @@
+:root[data-theme-mode="light"] {
+  --palette-primary: var(--abbes-primaryColor-50);
+  --palette-onPrimary: var(--abbes-primaryColor-10);
+}
+
+:root[data-theme-mode="dark"] {
+  --palette-primary: var(--abbes-primaryColor-50);
+  --palette-onPrimary: var(--abbes-primaryColor-90);
+}

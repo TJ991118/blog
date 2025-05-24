@@ -1,0 +1,15 @@
+{
+  "palette": {
+    "primary": "#134fed",
+    "neutral": "#000080"
+  },
+  "fontSize": {
+    "md": "1rem"
+  },
+  "radius": {
+    "md": "4px"
+  },
+  "edge": {
+    "md": "1rem"
+  }
+}
