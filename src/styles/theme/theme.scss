@@ -3,6 +3,26 @@
   --palette-on-primary: var(--abbes-primaryColor-10);
   --palette-primary-container: var(--abbes-primary-20);
   --palette-on-primaryContainer: var(--abbes-primary-70);
+
+  --palette-surface: var(--abbes-neutralColor-50);
+  --palette-on-surface: var(--abbes-neutralColor-50);
+  --palette-on-surface-low: var(--abbes-neutralColor-50);
+  --palette-on-surface-high: var(--abbes-neutralColor-50);
+  --palette-surface-container-low: var(--abbes-neutralColor-70);
+  --palette-surface-container-lowest: var(--abbes-neutralColor-80);
+  --palette-surface-container-high: var(--abbes-neutralColor-40);
+  --palette-surface-container-highest: var(--abbes-neutralColor-30);
+
+  --palette-outline: var(--abbes-neutralColor-50);
+  --palette-outline-var: var(--abbes-neutralColor-50);
+  --palette-divider: var(--abbes-neutralColor-50);
+  --palette-divider-var: var(--abbes-neutralColor-50);
+
+  --palette-border: var(--abbes-neutralColor-50);
+  --palette-border-low: var(--abbes-neutralColor-50);
+  --palette-border-lowest: var(--abbes-neutralColor-50);
+  --palette-border-high: var(--abbes-neutralColor-50);
+  --palette-border-highest: var(--abbes-neutralColor-50);
 }
 
 :root[data-theme-mode="dark"] {
@@ -12,7 +32,22 @@
   --palette-on-primaryContainer: var(--abbes-primaryColor-70);
 
   --palette-surface: var(--abbes-neutralColor-50);
-  --palette-on-surface: var(--abbes-neutralColor-10);
-  --palette-surface-container: var(--abbes-neutralColor-20);
-  --palette-on-surfaceContainer: var(--abbes-neutralColor-70);
+  --palette-on-suface: var(--abbes-neutralColor-50);
+  --palette-on-surface-low: var(--abbes-neutralColor-50);
+  --palette-on-surface-high: var(--abbes-neutralColor-50);
+  --palette-surface-container-low: var(--abbes-neutralColor-70);
+  --palette-surface-container-lowest: var(--abbes-neutralColor-80);
+  --palette-surface-container-high: var(--abbes-neutralColor-40);
+  --palette-surface-container-highest: var(--abbes-neutralColor-30);
+
+  --palette-outline: var(--abbes-neutralColor-50);
+  --palette-outline-var: var(--abbes-neutralColor-50);
+  --palette-divider: var(--abbes-neutralColor-50);
+  --palette-divider-var: var(--abbes-neutralColor-50);
+
+  --palette-border: var(--abbes-neutralColor-50);
+  --palette-border-low: var(--abbes-neutralColor-50);
+  --palette-border-lowest: var(--abbes-neutralColor-50);
+  --palette-border-high: var(--abbes-neutralColor-50);
+  --palette-border-highest: var(--abbes-neutralColor-50);
 }
