@@ -53,7 +53,7 @@ export default function ThemeProvider({
   return (
     <ThemeContext.Provider
       value={{
-        theme: "default",
+        name: "default",
         mode: mode,
       }}
     >
