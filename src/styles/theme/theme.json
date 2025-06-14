@@ -1,13 +1,18 @@
 {
   "palette": {
-    "primary": "#134fed",
-    "neutral": "#282828"
+    "source": "#134fed"
   },
   "fontSize": {
     "md": "1rem"
   },
   "radius": {
-    "md": "4px"
+    "xxs": "0.25REM",
+    "xs": "0.5rem",
+    "sm": "0.75rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "round": "900px",
+    "circle": "50%"
   },
   "edge": {
     "md": "1rem"

@@ -10,6 +10,7 @@
     "commit": "git add . && cz"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.3.0",
     "@zidian/web-theme": "^0.1.0-alpha.7",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
