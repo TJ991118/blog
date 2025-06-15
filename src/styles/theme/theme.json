@@ -3,7 +3,11 @@
     "source": "#134fed"
   },
   "fontSize": {
-    "md": "1rem"
+    "xs": "0.625rem",
+    "sm": "0.75rem",
+    "md": "1rem",
+    "lg": "1.25rem",
+    "xl": "1.75rem"
   },
   "radius": {
     "xxs": "0.25REM",
@@ -14,7 +18,13 @@
     "round": "900px",
     "circle": "50%"
   },
-  "edge": {
-    "md": "1rem"
+  "space": {
+    "xxs": "0.25REM",
+    "xs": "0.5rem",
+    "sm": "0.75rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "1.75rem",
+    "xxl": "2rem"
   }
 }
