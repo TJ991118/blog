@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "@/styles/components/function/header.scss";
 import "@/styles/components/function/footer.scss";
-import "@/styles/main.scss"
+import "@/styles/global.scss"
 
 import Header from "@/components/function/Header";
 import Footer from "@/components/function/Footer";
