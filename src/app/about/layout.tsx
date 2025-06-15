@@ -1,5 +1,8 @@
-const AboutLayout = () => {
-  return <div className="about-layout"></div>;
-};
-
-export default AboutLayout;
+export default function AboutLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="about-layout">
+      <aside>Dashboard Sidebar</aside>
+      <main>{children}</main>
+    </div>
+  )
+}
