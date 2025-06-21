@@ -2,7 +2,7 @@
   width: 100%;
 
   &.container-type__page {
-    height: calc(100vh - var(--HeaderHeight));
+    min-height: 100vh;
   }
 
   &.container-type__block {

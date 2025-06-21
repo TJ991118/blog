@@ -1,0 +1,35 @@
+.main-layout {  
+  --headerHeight: 64px;
+  --footerHeight: 72px
+  div {
+    box-sizing: border-box;
+  }
+  #header {
+    .header {
+      height: var(--headerHeight);
+      @apply flex justify-between items-center;
+      .header-left {
+      }
+      .header-right {
+        flex: 1;
+        @apply flex justify-end;
+        .nav-list{
+          @apply flex justify-center items-center;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  #content {
+    min-height: calc(100vh - var(--headerHeight));
+  }
+
+  #footer {
+    .footer {
+      font-size: 14px;
+      height: var(--footerHeight);
+    }
+  }
+
+}

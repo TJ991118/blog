@@ -1,6 +1,7 @@
 import { SquareChartGantt, Package, SquareUserRound } from "lucide-react";
-import Link from "../common/Link";
-import Container from "../common/Container";
+
+import Link from "@/components/common/Link";
+import Container from "@/components/common/Container";
 
 /**
  * @desc The list of header right
