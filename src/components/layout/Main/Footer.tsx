@@ -1,5 +1,5 @@
+"use client"
 import Container from "@/components/common/Container";
-
 
 const Footer = () => {
   return (
