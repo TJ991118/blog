@@ -1,34 +1,43 @@
-import { ComponentPropsWithRef, ReactNode } from "react";
-import BaseLink from "next/link";
 import clsx from "clsx";
+import BaseLink from "next/link";
+import { ComponentPropsWithRef, ReactNode } from "react";
+
+import styles from "@/styles/components/common/link.module.scss"
 
 
 interface LinkProps extends ComponentPropsWithRef<'div'> {
   type?: "text" | "button",
   href: string
   label: string
-  icon?: ReactNode
+  prefixIcon?: ReactNode
+  suffixIcon?: ReactNode
 }
 
-export default function Link(props: LinkProps ) {
+export default function Link(props: LinkProps) {
 
   const {
-    type = "text", href, icon, label,
+    type = "text",
+    label,
+    href,
+    prefixIcon,
+    suffixIcon,
     className,
     ...elementProps
   } = props
 
   const _class = clsx(
-    "comp-link",
+    styles["comp-link"],
+    styles[`link-type__${type}`],
     className
   )
 
   return (
     <div className={_class} {...elementProps}>
-      <span>{icon}</span>
-      <BaseLink href={href}>
+      {prefixIcon && <span className={clsx(styles["link-icon"], styles["link-icon-prefix"])}>{prefixIcon}</span>}
+      <BaseLink className={styles["link-content"]} href={href}>
         <span>{label}</span>
       </BaseLink>
+      {suffixIcon && <span className={clsx(styles["link-icon"], styles["link-icon-suffix"])}>{suffixIcon}</span>}
     </div>
   )
 }
