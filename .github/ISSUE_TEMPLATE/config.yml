@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links: []
+
+issue_templates:
+  - name: ✨ 新需求 / New Feature
+    description: 提交一个新的组件、页面或功能的开发需求
+    labels: 
+      - enhancement
+      - needs-triage
+    file: feature.yml
+
+  - name: 🐛 Bug 报告 / Bug Report
+    description: 报告一个你遇到的问题或异常行为
+    labels: 
+      - bug
+      - needs-triage
+    file: bug-report.yml

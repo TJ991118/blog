@@ -1,0 +1,87 @@
+name: 🐛 Bug 报告
+description: 提交你遇到的问题或异常行为
+title: "[Bug]: "
+labels: 
+  - bug
+  - needs-triage
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 简要描述
+      description: 简明扼要地描述你遇到的问题
+      placeholder: 比如：“点击按钮后页面没有跳转”
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重现步骤
+      description: 请提供尽可能详细的复现步骤
+      placeholder: |
+        1. 打开页面 `/dashboard`
+        2. 点击右上角的“新建”
+        3. 弹窗未出现
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或录屏,控制台日志（可选）
+      description: 如有截图或屏幕录制，请贴在这里（支持拖拽上传）
+    validations:
+      required: false
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: 设备类型
+      description: 设备类型
+      placeholder: 比如：桌面端 / 移动端
+      options:
+        - 桌面端
+        - 移动端
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 设备运行环境
+      description: 设备运行环境
+      placeholder: 比如：Windows 11 / Chrome 115
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Android
+        - iOS
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 浏览器/版本
+      description: 描述你的浏览器环境
+      placeholder: 比如 Chrome
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Opera
+        - 其他
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他补充信息
+      description: 任何你认为有用的上下文信息
+    validations:
+      required: false
