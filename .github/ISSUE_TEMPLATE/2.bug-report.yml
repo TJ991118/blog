@@ -39,8 +39,7 @@ body:
     id: device-type
     attributes:
       label: 设备类型
-      description: 设备类型
-      placeholder: 比如：桌面端 / 移动端
+      description: 设备类型，比如：桌面端 / 移动端
       options:
         - 桌面端
         - 移动端
@@ -51,8 +50,7 @@ body:
     id: environment
     attributes:
       label: 设备运行环境
-      description: 设备运行环境
-      placeholder: 比如：Windows 11 / Chrome 115
+      description: 设备运行环境，比如：Windows 11 / Chrome 115
       options:
         - Windows
         - Linux
@@ -66,8 +64,7 @@ body:
     id: browser
     attributes:
       label: 浏览器/版本
-      description: 描述你的浏览器环境
-      placeholder: 比如 Chrome
+      description: 描述你的浏览器环境，比如 Chrome
       options:
         - Chrome
         - Firefox
