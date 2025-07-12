@@ -7,11 +7,11 @@ issue_templates:
     labels: 
       - enhancement
       - needs-triage
-    file: feature.yml
+    file: 1.feature.yml
 
   - name: 🐛 Bug 报告 / Bug Report
     description: 报告一个你遇到的问题或异常行为
     labels: 
       - bug
       - needs-triage
-    file: bug-report.yml
+    file: 2.bug-report.yml
