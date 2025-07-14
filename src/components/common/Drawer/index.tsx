@@ -1,20 +1,20 @@
 "use client"
 
-import { FC } from "react";
-
+import clsx from "clsx";
+import { FC, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./index.module.scss"
 import { DrawerProps } from "./DrawerProps";
-import clsx from "clsx";
 
 const Drawer: FC<DrawerProps> = (props) => {
 
   const {
     open,
-    children,
+    placement = "left",
     className,
+    children,
     onOpenChange,
     ...elementProps
   } = props
@@ -24,6 +24,31 @@ const Drawer: FC<DrawerProps> = (props) => {
       onOpenChange(false);
     }
   }
+
+  const contentVariant = useMemo(() => {
+    switch (placement) {
+      case "left":
+        return { hidden: { x: "-100%" }, visible: { x: 0 } };
+      case "right":
+        return { hidden: { x: "100%" }, visible: { x: 0 } };
+      case "top":
+        return { hidden: { y: "-100%" }, visible: { y: 0 } };
+      case "bottom":
+        return { hidden: { y: "100%" }, visible: { y: 0 } };
+    }
+  }, [placement])
+  const _styles = useMemo(() => {
+    switch (placement) {
+      case "left":
+        return { top: 0, left: 0, height: "100%", minWidth: "20%" };
+      case "right":
+        return { top: 0, right: 0, height: "100%", minWidth: "20%" };
+      case "top":
+        return { top: 0, width: "100%", minHeight: "20%" };
+      case "bottom":
+        return { bottom: 0, width: "100%", minHeight: "20%" };
+    }
+  }, [placement])
 
   return createPortal(
     <AnimatePresence>
@@ -40,9 +65,10 @@ const Drawer: FC<DrawerProps> = (props) => {
             />
             <motion.div
               className={styles["DrawerContent"]}
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
+              style={_styles}
+              initial={contentVariant.hidden}
+              animate={contentVariant.visible}
+              exit={contentVariant.hidden}
               transition={{ type: 'tween', duration: 0.3 }}
             >
               {children}
