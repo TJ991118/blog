@@ -1,0 +1,24 @@
+.DrawerContainer {
+  --baseLevel: 1000;
+  position: fixed;
+  inset: 0;
+  z-index: var(--baseLevel);
+}
+
+
+.DrawerMask {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.DrawerContent {
+  top: 0;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  z-index: calc(var(--baseLevel) + 2);
+  background-color: rgb(255, 255, 255);
+}
