@@ -1,4 +1,4 @@
-.comp-link {
+.Link {
   color: black;
   gap: 4px;
   @apply flex items-center justify-center text-sm font-medium;
@@ -8,17 +8,7 @@
     text-decoration: none;
   }
 
-  .link-icon {
-    &-preffix {
-    }
-    &-suffix {
-    }
-  }
-
-  .link-content {
-  }
-
-  &.link-type__text {
+  &.LinkTypeText {
     &:hover {
       @apply text-primary;
       a {
@@ -29,7 +19,16 @@
     }
   }
 
-  &.link-type__button {
-
+  &.LinkTypeButton {
   }
+}
+
+.LinkIcon {
+  &-preffix {
+  }
+  &-suffix {
+  }
+}
+
+.LinkContent {
 }
