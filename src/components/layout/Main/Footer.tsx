@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Container from "@/components/common/Container";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
         This is footer
       </Container>
     </footer>
-  )
+  );
 };
 
 export default Footer;

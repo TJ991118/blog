@@ -1,8 +1,8 @@
-"use client"
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import { SquareChartGantt, Package, SquareUserRound } from "lucide-react";
 
-import Logo from "@/assets/img/logo_light.png"
+import Logo from "@/assets/img/logo_light.png";
 
 import Link from "@/components/common/Link";
 import Container from "@/components/common/Container";
