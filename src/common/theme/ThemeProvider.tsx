@@ -1,12 +1,6 @@
 "use client";
 import { createContext, useEffect, useState } from "react";
 
-import defaultTheme from "@/styles/theme/theme.json";
-import { GenPalette } from "./palette";
-import { GenOther } from "./other";
-
-const { palette: PALETTE, ...OTHER }  = defaultTheme
-
 function getSaveMode(): "system" | "light" | "dark" {
   const storageInfo = localStorage.getItem("theme")
   const savedTheme = storageInfo !== null ? JSON.parse(storageInfo) : null
@@ -19,41 +13,28 @@ export const ThemeContext = createContext({
   setMode: (mode: "system" | "light" | "dark") => { console.log("current mode: ", mode) }
 });
 
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const [mode, setMode] = useState<"light" | "dark">("light");
-
   useEffect(() => {
-
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChangeMedia = (e?: MediaQueryListEvent) => {
       const savedMode = getSaveMode()
       const isDark = e ? e.matches : mediaQuery.matches;
-      const perferMode = isDark ? "dark" : "light";
+      const preferMode = isDark ? "dark" : "light";
       if (savedMode === "system") {
-        document.documentElement.setAttribute("data-theme-mode", perferMode);
-        setMode(perferMode);
+        document.documentElement.setAttribute("data-theme-mode", preferMode);
+        setMode(preferMode);
       }
     };
-
     handleChangeMedia();
     mediaQuery.addEventListener("change", handleChangeMedia);
-
-    GenOther(OTHER)
-
     return () => {
       mediaQuery.removeEventListener("change", handleChangeMedia);
     };
   }, []);
-
   useEffect(() => {
-    GenPalette(PALETTE, mode)
   }, [mode])
-
 
   return (
     <ThemeContext.Provider

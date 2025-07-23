@@ -1,0 +1,11 @@
+:root[data-theme-mode='light'] {
+  @import-json "../styles/token/palette/light.json";
+}
+
+:root[data-theme-mode='dark'] {
+  @import-json "../styles/token/palette/light.json";
+}
+
+:root {
+  @import-json "../styles/token/other/other.json";
+}

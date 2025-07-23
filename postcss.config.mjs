@@ -2,6 +2,9 @@
 const config = {
   plugins: {
     tailwindcss: {},
+    '@daltontan/postcss-import-json': {
+      prefix: '--abbes-sys-'
+    }
   },
 };
 

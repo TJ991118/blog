@@ -1,63 +1,34 @@
 module.exports = {
   types: [
-    {
-      value: "✨ feat",
-      name: "✨ feat:     New Function",
-    },
-    {
-      value: "🐞 fix",
-      name: "🐞 fix:      Fix Bug",
-    },
-    {
-      value: "📝 docs",
-      name: "📝 docs:     Update Document",
-    },
-    {
-      value: "🌈 style",
-      name: "🌈 style:    Style the code",
-    },
-    {
-      value: "🦄 refactor",
-      name: "🦄 refactor: Refactor the code",
-    },
-    {
-      value: "🎈 pref",
-      name: "🎈 pref:     Performance Optimization",
-    },
-    {
-      value: "🧪 test",
-      name: "🧪 test:     Related of test",
-    },
-    {
-      value: "🐎 ci",
-      name: "🐎 ci:       Related of CI/CD config",
-    },
-    {
-      value: "🐳 chore",
-      name: "🐳 chore:    Other function unrelated of main function",
-    },
-    {
-      value: "↩  revert",
-      name: "↩  revert:   Revert old version",
-    },
+    { value: "✨ feat", name: "✨ feat:     New Function" },
+    { value: "🐞 fix", name: "🐞 fix:      Fix Bug" },
+    { value: "📝 docs", name: "📝 docs:     Update Document" },
+    { value: "🌈 style", name: "🌈 style:    Style the code" },
+    { value: "🦄 refactor", name: "🦄 refactor: Refactor the code" },
+    { value: "🎈 pref", name: "🎈 pref:     Performance Optimization" },
+    { value: "🧪 test", name: "🧪 test:     Related of test" },
+    { value: "🐎 ci", name: "🐎 ci:       Related of CI/CD config" },
+    { value: "🐳 chore", name: "🐳 chore:    Other function unrelated of main function" },
+    { value: "↩  revert", name: "↩  revert:   Revert old version" },
   ],
   scopes: [
-    "component",
+    "auth",
+    "bug",
     "ui",
     "config",
     "test",
-    "chore",
-    "function",
-    "page",
-    "layout",
+    "deploy",
+    "component",
+    "format",
   ],
   messages: {
     type: "选择提交类型（必填）",
     scope: "输入影响范围（可选）",
     subject: "简短描述变更（必填）",
     body: "详细描述（可选）",
+    footer: "关联的 Issues（例如: #123, #456）（可选）:",
     confirmCommit: "确认提交？",
   },
-  skipQuestions: ["body", "footer"],
+  skipQuestions: ["body"],
   subjectLimit: 100,
 };

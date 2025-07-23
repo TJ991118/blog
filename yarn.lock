@@ -176,13 +176,6 @@
   dependencies:
     find-up "^7.0.0"
 
-"@commitlint/types@^17":
-  version "17.8.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-17.8.1.tgz#883a0ad35c5206d5fef7bc6ce1bbe648118af44e"
-  integrity sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==
-  dependencies:
-    chalk "^4.1.0"
-
 "@commitlint/types@^19.8.1":
   version "19.8.1"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-19.8.1.tgz#7971fbd56b0cfb31692a4e1941b74ac8217c44e5"
@@ -190,6 +183,11 @@
   dependencies:
     "@types/conventional-commits-parser" "^5.0.0"
     chalk "^5.3.0"
+
+"@daltontan/postcss-import-json@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@daltontan/postcss-import-json/-/postcss-import-json-1.1.1.tgz#73b66a2b04131dea00e3d15f95869708a962219d"
+  integrity sha512-O00tu73ApgCIQeQ/P+Wm0Vysinq/YRL4rHsx0O42StdFs9MXnQtzpZw0C37CCg+bxBadwKlZowRy0sf4MTMeeA==
 
 "@emnapi/core@^1.4.3":
   version "1.4.3"
@@ -278,14 +276,6 @@
   dependencies:
     "@eslint/core" "^0.14.0"
     levn "^0.4.1"
-
-"@gitmoji/gitmoji-regex@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@gitmoji/gitmoji-regex/-/gitmoji-regex-1.0.0.tgz#937645b0bb90de70538a172efb5a07b81d6d22fd"
-  integrity sha512-+BFXxcWCxn0UIYuG1v5n9SfaCCS8tw95j1x3QsTJRdGGiihRyVLTHiu1wrHlzH3z4nYXKjCKiZFTdWwMjRI+gQ==
-  dependencies:
-    emoji-regex "^10"
-    gitmojis "^3"
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
@@ -478,11 +468,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
-
-"@material/material-color-utilities@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@material/material-color-utilities/-/material-color-utilities-0.3.0.tgz#681b0ecd0820ac012d50d371912227f6b2dc7817"
-  integrity sha512-ztmtTd6xwnuh2/xu+Vb01btgV8SQWYCaK56CkRK8gEkWe5TuDyBcYJ0wgkMRn+2VcE9KUmhvkz+N9GHrqw/C0g==
 
 "@napi-rs/wasm-runtime@^0.2.10":
   version "0.2.11"
@@ -1031,13 +1016,6 @@
   resolved "https://registry.yarnpkg.com/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.7.2.tgz#7fd81d89e34a711d398ca87f6d5842735d49721e"
   integrity sha512-friS8NEQfHaDbkThxopGk+LuE5v3iY0StruifjQEt7SLbA46OnfgMO15sOTkbpJkol6RB+1l1TYPXh0sCddpvA==
 
-"@zidian/web-theme@^0.1.0-alpha.7":
-  version "0.1.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/@zidian/web-theme/-/web-theme-0.1.0-alpha.7.tgz#56fe6f67185304d858d0f6b4004e1b1d403f2f43"
-  integrity sha512-nwbpsx47tdbfzwIzsk9SJ6dkr3PL7JpqxnKDoGUvSOMG1nFHtRxSQyJSjhKmYtp5WkoepC63h+fzCO1JsFUWZA==
-  dependencies:
-    "@material/material-color-utilities" "^0.3.0"
-
 JSONStream@^1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
@@ -1578,15 +1556,6 @@ commitlint-config-git-commit-emoji@^1.0.0:
   resolved "https://registry.yarnpkg.com/commitlint-config-git-commit-emoji/-/commitlint-config-git-commit-emoji-1.0.0.tgz#56b9c9b164c55c608da71d8e82424430c87c1dd2"
   integrity sha512-AnWvAu50BZ2ikzlsECKya4nAvPdu62RC3U/8wmb8TlSiLbaLrz10jV8On/8tc2UW1C9ckuLQx3WkLhaiFcvPhg==
 
-commitlint-plugin-gitmoji@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/commitlint-plugin-gitmoji/-/commitlint-plugin-gitmoji-2.2.6.tgz#cae0b406646c3965b96e217b5e8a33d1de5fc7e6"
-  integrity sha512-oKHPHeNXby0Ix0ZbHVSK5ZyPx1V4fyBjLOy93cYwXhOEPXe36nkDc/HDPFfQpzx1vz39277TaP9LScbqTbscfQ==
-  dependencies:
-    "@commitlint/types" "^17"
-    "@gitmoji/gitmoji-regex" "1.0.0"
-    gitmojis "^3"
-
 compare-func@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/compare-func/-/compare-func-2.0.0.tgz#fb65e75edbddfd2e568554e8b5b05fff7a51fcb3"
@@ -1839,11 +1808,6 @@ editor@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/editor/-/editor-1.0.0.tgz#60c7f87bd62bcc6a894fa8ccd6afb7823a24f742"
   integrity sha512-SoRmbGStwNYHgKfjOrX2L0mUvp9bUVv0uPppZSOMAntEbcFtoC3MKF5b3T6HQPXKIV+QGY3xPO3JK5it5lVkuw==
-
-emoji-regex@^10:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-10.4.0.tgz#03553afea80b3975749cfcb36f776ca268e413d4"
-  integrity sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2501,11 +2465,6 @@ git-raw-commits@^4.0.0:
     dargs "^8.0.0"
     meow "^12.0.1"
     split2 "^4.0.0"
-
-gitmojis@^3:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/gitmojis/-/gitmojis-3.15.0.tgz#a6fa1dc02bd05d05c698f986197c10308543f4b8"
-  integrity sha512-28sothO0+6UuXx0fnJXi4kqy2/dKeFN3xL2Ss5k5K5ECBJMi5T2kZLY92xys3/+YD+AgKHgeiw7YQpYKnkCLMg==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"

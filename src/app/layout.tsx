@@ -4,6 +4,7 @@ import "@/styles/global.scss"
 
 import ThemeProvider from "@/common/theme/ThemeProvider";
 import MainLayout from "@/components/layout/Main";
+import "../styles/theme.scss"
 
 export const metadata: Metadata = {
   title: "Create Next App",
