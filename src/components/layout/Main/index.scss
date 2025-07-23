@@ -4,40 +4,11 @@
   div {
     box-sizing: border-box;
   }
-  #header {
-    .header {
-      height: var(--headerHeight);
-      @apply flex justify-between items-center;
-      .header-left {
-        height: 100%;
-        .logo {
-          height: 100%;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-      .header-right {
-        flex: 1;
-        @apply flex justify-end;
-        .nav-list{
-          @apply flex justify-center items-center;
-          gap: 12px;
-        }
-      }
-    }
-  }
 
   #content {
     min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
   }
 
-  #footer {
-    .footer {
-      font-size: 14px;
-      height: var(--footerHeight);
-    }
-  }
+
 
 }

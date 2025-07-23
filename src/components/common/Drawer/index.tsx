@@ -13,8 +13,9 @@ const Drawer: FC<DrawerProps> = (props) => {
   const {
     open,
     placement = "left",
-    className,
     children,
+    className,
+    contentClass,
     onOpenChange,
     ...elementProps
   } = props
@@ -74,7 +75,7 @@ const Drawer: FC<DrawerProps> = (props) => {
               onClick={handleClose}
             />
             <motion.div
-              className={styles["DrawerContent"]}
+              className={clsx(styles["DrawerContent"], contentClass)}
               style={_styles}
               initial={contentVariant.hidden}
               animate={contentVariant.visible}

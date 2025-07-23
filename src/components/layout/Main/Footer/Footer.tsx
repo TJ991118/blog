@@ -1,4 +1,7 @@
 "use client";
+
+import "./footer.scss"
+
 import Container from "@/components/common/Container";
 
 const Footer = () => {
