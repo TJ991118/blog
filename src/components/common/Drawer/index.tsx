@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
 import clsx from "clsx";
-import { FC, useMemo } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -19,11 +19,7 @@ const Drawer: FC<DrawerProps> = (props) => {
     ...elementProps
   } = props
 
-  const handleClose = () => {
-    if (onOpenChange) {
-      onOpenChange(false);
-    }
-  }
+
 
   const contentVariant = useMemo(() => {
     switch (placement) {
@@ -49,6 +45,20 @@ const Drawer: FC<DrawerProps> = (props) => {
         return { bottom: 0, width: "100%", minHeight: "20%" };
     }
   }, [placement])
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleClose = () => {
+    if (onOpenChange) {
+      onOpenChange(false);
+    }
+  }
+
+  if (!mounted) return null;
 
   return createPortal(
     <AnimatePresence>
