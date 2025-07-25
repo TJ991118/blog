@@ -25,13 +25,13 @@ const Drawer: FC<DrawerProps> = (props) => {
   const contentVariant = useMemo(() => {
     switch (placement) {
       case "left":
-        return { hidden: { x: "-100%" }, visible: { x: 0 } };
+        return { hidden: { x: "-100%", opacity: 0 }, visible: { x: 0, opacity: 1 } };
       case "right":
-        return { hidden: { x: "100%" }, visible: { x: 0 } };
+        return { hidden: { x: "100%", opacity: 0 }, visible: { x: 0, opacity: 1 } };
       case "top":
-        return { hidden: { y: "-100%" }, visible: { y: 0 } };
+        return { hidden: { y: "-100%", opacity: 0 }, visible: { y: 0, opacity: 1 } };
       case "bottom":
-        return { hidden: { y: "100%" }, visible: { y: 0 } };
+        return { hidden: { y: "100%", opacity: 0 }, visible: { y: 0, opacity: 1 } };
     }
   }, [placement])
   const _styles = useMemo(() => {
@@ -68,10 +68,10 @@ const Drawer: FC<DrawerProps> = (props) => {
           <div className={clsx(styles["DrawerContainer"], className)} {...elementProps}>
             <motion.div
               className={styles["DrawerMask"]}
-              initial={{ backdropFilter: "blur(0px)" }}
-              animate={{ backdropFilter: "blur(5px)" }}
-              exit={{ backdropFilter: "blur(0px)" }}
-              transition={{ duration: .3 }}
+              initial={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(0, 0, 0, 0)" }}
+              animate={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+              exit={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(0, 0, 0, 0)" }}
+              transition={{ type: "tween", duration: 0.4 }}
               onClick={handleClose}
             />
             <motion.div
@@ -80,7 +80,12 @@ const Drawer: FC<DrawerProps> = (props) => {
               initial={contentVariant.hidden}
               animate={contentVariant.visible}
               exit={contentVariant.hidden}
-              transition={{ type: 'tween', duration: 0.3 }}
+              // transition={{ type: "spring", damping: 30, stiffness: 250 }}
+              transition={{
+                type: 'keyframes',
+                ease: [0.33, 1, 0.68, 1],
+                duration: 0.4,
+              }}
             >
               {children}
             </motion.div>

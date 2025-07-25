@@ -29,8 +29,24 @@
 }
 
 #nav-drawer {
-
   .nav-content {
-    width: 1024px;
+    width: 100%;
+    max-width: 1024px;
+    @apply flex justify-between items-center;
+
+    &>div {
+      align-self: stretch;
+      @apply flex flex-col justify-center items-center;
+    }
+
+    .nav-list-content {
+      width: 55%;
+      border-left: 1px solid var(--abbes-sys-color-surface-container);
+    }
+
+    .user-info-content {
+      z-index: -1;
+      width: 45%;
+    }
   }
 }

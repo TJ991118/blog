@@ -21,7 +21,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     const handleChangeMedia = (e?: MediaQueryListEvent) => {
       const savedMode = getSaveMode()
       const isDark = e ? e.matches : mediaQuery.matches;
-      const preferMode = isDark ? "dark" : "light";
+      const preferMode = !isDark ? "dark" : "light";
       if (savedMode === "system") {
         document.documentElement.setAttribute("data-theme-mode", preferMode);
         setMode(preferMode);

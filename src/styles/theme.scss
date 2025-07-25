@@ -1,4 +1,4 @@
-:root[data-theme='light'] {
+:root[data-theme-mode='light'] {
   --abbes-sys-color-primary: rgb(39 60 3);
   --abbes-sys-color-surface-tint: rgb(78 102 41);
   --abbes-sys-color-on-primary: rgb(255 255 255);
@@ -63,7 +63,7 @@
   --abbes-sys-color-on-success-container: rgb(255 255 255);
 }
 
-:root[data-theme='dark'] {
+:root[data-theme-mode='dark'] {
   --abbes-sys-color-primary: rgb(202 230 155);
   --abbes-sys-color-surface-tint: rgb(180 208 135);
   --abbes-sys-color-on-primary: rgb(26 42 0);

@@ -34,6 +34,7 @@ const NavMenu: FC<ComponentPropsWithRef<'div'>> = (props) => {
 const UserInfo: FC<ComponentPropsWithRef<'div'>> = (props) => {
   return (
     <div {...props}>
+      This is user info
     </div>
   )
 }
@@ -52,8 +53,8 @@ const HeaderNav = () => {
         placement="right"
         onOpenChange={(isOpen) => setOpen(isOpen)}
       >
-        <NavMenu className="nav-list-content" />
         <UserInfo className="user-info-content" />
+        <NavMenu className="nav-list-content" />
       </Drawer>
     </div>
   )

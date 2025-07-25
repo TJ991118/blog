@@ -9,13 +9,11 @@
 .DrawerMask {
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
 .DrawerContent {
   position: absolute;
   z-index: calc(var(--baseLevel) + 2);
-  background-color: rgb(255, 255, 255);
+  background-color: var(--abbes-sys-color-surface);
 }
